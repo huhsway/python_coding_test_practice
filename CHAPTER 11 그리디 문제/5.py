@@ -15,3 +15,4 @@ for i in range(1, m+1):
     result += array[i] * n # B가 선택하는 경우의 수와 곱해주기
 
 print(result)
+
