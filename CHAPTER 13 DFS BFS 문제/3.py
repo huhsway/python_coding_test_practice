@@ -2,12 +2,12 @@ from collections import deque
 
 n, k = map(int, input().split())
 
-graph = [] # 전체 보드 정보를 담는 리스트
-data = [] # 바이러스에 대한 정보를 담는 리스트
+graph = []  # 전체 보드 정보를 담는 리스트
+data = []  # 바이러스에 대한 정보를 담는 리스트
 
 for i in range(n):
     # 보드 정보를 한 줄 단위로 입력
-    graph.append(list(map(int,input().split())))
+    graph.append(list(map(int, input().split())))
     for j in range(n):
         # 해당 위치에 바이러스가 존재하는 경우
         if graph[i][j] != 0:
@@ -18,11 +18,11 @@ for i in range(n):
 data.sort()
 q = deque(data)
 
-target_s, target_x, target_y = map(int,input().split())
+target_s, target_x, target_y = map(int, input().split())
 
 # 바이러스가 퍼져나갈 수 있는 4가지의 위치
-dx = [-1,0,1,0]
-dy = [0,1,0,-1]
+dx = [-1, 0, 1, 0]
+dy = [0, 1, 0, -1]
 
 # 너비 우선 탐색(BFS) 진행
 while q:
@@ -39,6 +39,6 @@ while q:
             # 아직 방문하지 않은 위치라면, 그 위치에 바이러스 넣기
             if graph[nx][ny] == 0:
                 graph[nx][ny] = virus
-                q.append((virus, s+1, nx, ny))
+                q.append((virus, s + 1, nx, ny))
 
-print(graph[target_x-1][target_y-1])
+print(graph[target_x - 1][target_y - 1])
