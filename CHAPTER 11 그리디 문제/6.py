@@ -26,5 +26,3 @@ def solution(food_times, k):
     result = sorted(q, key=lambda x : x[1]) # 음식의 번호 기준으로 정렬
     return result[(k - sum_value) % length][1]
 
-
-
