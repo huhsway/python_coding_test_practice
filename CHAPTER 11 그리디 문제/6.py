@@ -9,7 +9,7 @@ def solution(food_times, k):
     q = []
     for i in range(len(food_times)):
         # (음식 시간, 음식 번호) 형태로 우선순위 큐에 삽입
-        heapq.heappush(q, (food_tiems[i], i+1))
+        heapq.heappush(q, (food_times[i], i+1))
 
     sum_value = 0 # 먹기 위해 사용한 시간
     previous = 0 # 직전에 다 먹은 음식 시간
