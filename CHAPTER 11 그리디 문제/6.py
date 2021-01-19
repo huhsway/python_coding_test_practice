@@ -27,3 +27,4 @@ def solution(food_times, k):
     return result[(k - sum_value) % length][1]
 
 
+
