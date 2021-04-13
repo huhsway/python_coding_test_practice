@@ -4,6 +4,7 @@ from collections import deque
 n,m,k,x = map(int,input().split())
 graph = [[] for _ in range(n+1)]
 
+
 # 모든 도로 정보 입력 받기
 for _ in range(m):
     a, b = map(int,input().split())
