@@ -18,7 +18,7 @@ for _ in range(m):
     # a번 노드에서 b번 노드로 가는 비용이 c라는 의미
     graph[a].append((b,c))
 
-def djkstra(start):
+def dijkstra(start):
     q = []
     # 시작 노드로 가기 위한 최단 경로는 0으로 설정하며, 큐에 삽입
     heapq.heappush(q,(0,start))
