@@ -21,7 +21,8 @@ for tc in range(int(input())):
 
     x, y = 0, 0 # 시작 위치는 (0,0)
     # 시작 노드로 가기 위한 비용은 (0,0) 위치의 값으로 설정하여, 큐에 삽입
-    q = [(graph[x][y], x, y)]
+    q = []
+    heapq.heappush(q, (graph[x][y], x, y))
     distance[x][y] = graph[x][y]
 
     # 다익스트라 알고리즘을 수행
